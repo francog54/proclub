@@ -1,0 +1,56 @@
+<ion-header class="ion-no-border">
+  <app-header [titulo]="titulo"></app-header>
+</ion-header>
+
+<ion-content>
+
+  <ion-toolbar class="toolbar-text">
+    <ion-text class="notificacion-text">Seleccioná destinatarios</ion-text>
+
+    <ion-grid>
+      <ion-row>
+        <span>Titulo y descripción ></span>
+        <span class="span-1">Destinatarios ></span>
+        <span>Enviar</span>
+      </ion-row>
+    </ion-grid>
+  </ion-toolbar>
+
+  <ion-toolbar class="toolbar-select">
+
+    <form [formGroup]="form" (ngSubmit)="siguiente()">
+      <ion-item>
+        <ion-select formControlName="disciplina" (ionChange)="divisiones($event)" interface="action-sheet"
+          placeholder="Disciplina">
+          <ion-select-option *ngFor="let disciplina of listDisciplina" [value]="disciplina">{{disciplina.disciplina.nombre}}
+          </ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-select formControlName="division" (ionChange)="posiciones()" interface="action-sheet" placeholder="División">
+          <ion-select-option *ngFor="let division of listDivisiones" [value]="division">{{division.nombre}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-select formControlName="posicion"  interface="action-sheet" placeholder="Posicion">
+          <ion-select-option *ngFor="let posicion of listPosiciones" [value]="posicion">{{posicion.nombre}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-select formControlName="usuario"  interface="action-sheet"
+          placeholder="Seleccionar socios">
+          <ion-select-option *ngFor="let usuario of usuarios" [value]="usuario">{{usuario.rol}}</ion-select-option>
+        </ion-select>
+      </ion-item>
+
+      <ion-button type="submit" [disabled]="form.invalid" class="btn-holder" color="ligth" size="large" expand="block">
+        CONTINUAR</ion-button>
+
+    </form>
+
+  </ion-toolbar>
+
+</ion-content>

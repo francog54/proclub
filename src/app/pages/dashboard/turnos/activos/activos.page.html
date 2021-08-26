@@ -1,0 +1,50 @@
+<ion-content>
+  <ion-row>
+    <ion-col size="12" *ngFor="let item of activos" (click)="turnoConfirmado(item.id)">
+      <ion-row>
+        <ion-col size="2">
+          <div class="logo-deporte">
+            <ion-icon name="football-outline" class="football-icon"></ion-icon>
+          </div>
+        </ion-col>
+        <ion-col size="10">
+          <div class="deportes">
+            <div class="text-container">
+              <ion-text class="football"><b>{{ item.fecha }} - {{ item.horaDesde }} a {{ item.horaHasta }}</b>
+              </ion-text>
+              <h6 class="ion-no-margin descripcion-tarjeta">Cancha de futbol 5</h6>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12" (click)="turnoConfirmado(1)">
+      <ion-row>
+        <ion-col size="2">
+          <div class="logo-deporte">
+            <ion-icon name="football-outline" class="football-icon"></ion-icon>
+          </div>
+        </ion-col>
+        <ion-col size="10">
+          <div class="deportes">
+            <div class="text-container">
+              <ion-text class="football"><b> 30/06/2021 </b> 09:00 a 12:00</ion-text>
+              <h6 class="ion-no-margin descripcion-tarjeta">Cancha de futbol 5</h6>
+              <ion-col size="2">
+              </ion-col>
+              <ion-row class="ion-align-items-start">
+                <ion-col>
+                </ion-col>
+                <ion-col class="cancelado">
+                  Turno cancelado
+                </ion-col>
+              </ion-row>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-content>

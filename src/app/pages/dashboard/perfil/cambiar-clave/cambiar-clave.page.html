@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <app-header [titulo]="titulo"></app-header>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <form>
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked" class="form-label">Clave actual<b style="color:red;">*</b></ion-label>
+        <ion-input #input1 type="password" [type]="hide ? 'password' : 'text' "></ion-input>
+        <ion-fab horizontal="end" class="icon-eye" *ngIf="input1.value">
+          <ion-icon [name]=" hide ? 'eye-outline' : 'eye-off-outline'" class="icon" color="medium"
+            (click)="hide = !hide"></ion-icon>
+        </ion-fab>
+      </ion-item>
+
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked" class="form-label">Nueva clave<b style="color:red;">*</b></ion-label>
+        <ion-input #input2 [type]="hide1 ? 'password' : 'text' "></ion-input>
+        <ion-fab horizontal="end" class="icon-eye" *ngIf="input2.value">
+          <ion-icon [name]="hide1 ? 'eye-outline' : 'eye-off-outline'" class="icon" color="medium"
+            (click)="hide1 = !hide1"></ion-icon>
+        </ion-fab>
+      </ion-item>
+
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked" class="form-label">Repetir clave<b style="color:red;">*</b></ion-label>
+        <ion-input #input3 [type]="hide2 ? 'password' : 'text' "></ion-input>
+        <ion-fab horizontal="end" class="icon-eye" *ngIf="input3.value">
+          <ion-icon [name]="hide2 ? 'eye-outline' : 'eye-off-outline'" class="icon" color="medium"
+            (click)="hide2 = !hide2">
+          </ion-icon>
+        </ion-fab>
+      </ion-item>
+    </form>
+  </div>
+</ion-content>

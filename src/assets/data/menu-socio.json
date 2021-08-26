@@ -1,0 +1,38 @@
+[
+    {
+      "icon": "megaphone",
+      "name": "Notificaciones",
+      "redirectTo": "/menu/notificaciones"
+    },
+    {
+      "icon": "calendar-outline",
+      "name": "Turnos",
+      "redirectTo": "/menu/turnos"
+    },
+    {
+      "icon": "qr-code-outline",
+      "name": "Ingresos",
+      "redirectTo": "/menu/ingresos"
+    },
+    {
+      "icon": "document-attach-outline",
+      "name": "Documentación",
+      "redirectTo": "/menu/documentacion"
+    },
+    {
+      "icon": "heart",
+      "name": "Beneficios",
+      "redirectTo": "/menu/beneficios"
+    },
+    {
+      "icon": "newspaper-outline",
+      "name": "Info Util",
+      "redirectTo": "/menu/info-util"
+    },
+    {
+      "icon": "person",
+      "name": "Perfil",
+      "redirectTo": "/menu/perfil"
+    }
+  
+]

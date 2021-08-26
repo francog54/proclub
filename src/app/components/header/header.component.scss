@@ -1,0 +1,15 @@
+.toolbar {
+    --background: #d90000;
+    padding-top: 10px;
+    ion-back-button {
+        --color: #ffffff;
+    }
+    ion-title {
+        --color: #ffffff;
+        font-size: 18px;
+        font-style: normal !important;
+        font-weight: 530 !important;
+        text-align: start;
+    }
+}
+

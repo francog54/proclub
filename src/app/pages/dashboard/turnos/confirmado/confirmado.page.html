@@ -1,0 +1,37 @@
+<ion-header class="ion-no-border">
+  <app-header [titulo]="titulo"></app-header>
+</ion-header>
+
+<ion-content >
+  <ion-row>
+      <ion-card  >
+        <ion-card-content>
+          Cancha de futbol 5
+
+          Mie. 20 Abril
+         
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+    <ion-row>
+      <ion-card>
+
+        <ion-card-content>
+   
+
+          La reserva es de UNA HORA
+
+          Capacidad máxima: 10 personas
+
+          El valor del turno es de $250.-
+          (se deberá abonar al asistir al turno
+          en la mesa de entrada)
+         
+        </ion-card-content>
+      </ion-card>
+    </ion-row>
+
+    <ion-button (click)="confirmarTurno()"  class="ion-margin btn-negro"    expand="block">CONFIRMAR TURNO</ion-button>
+
+
+</ion-content>

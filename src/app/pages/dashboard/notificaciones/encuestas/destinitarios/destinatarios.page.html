@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <app-header [titulo]="titulo"></app-header>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar class="toolbar-text">
+    <span><b>Seleccioná destinatarios</b></span>
+  </ion-toolbar>
+
+  <ion-toolbar class="toolbar-text">
+    <div class="text-container">
+      <span >Titulo y descripción ></span>
+      <span>Preguntas ></span>
+      <span class="span-1" >Destinatarios ></span>
+      <span>Enviar</span>
+    </div>
+  </ion-toolbar>
+
+  <ion-toolbar class="toolbar-input">
+
+  <form [formGroup]="form" (ngSubmit)="siguiente()">
+    
+    <ion-select formControlName="usuario" (ionChange)="onChange($event)"  interface="action-sheet">
+      <ion-select-option *ngFor="let usuario of usuarios" [value]="usuario">{{usuario.rol}}</ion-select-option>
+    </ion-select>
+    
+    
+    <ion-select formControlName="club" (ionChange)="onChange($event)"  interface="action-sheet">
+      <ion-select-option *ngFor="let club of clubes" [value]="club">{{club.nombre}}</ion-select-option>
+    </ion-select>
+
+    <ion-select formControlName="disciplina" (ionChange)="onChange($event)"  interface="action-sheet">
+      <ion-select-option *ngFor="let disciplina of disciplinas" [value]="disciplina">{{disciplina.nombre}}</ion-select-option>
+    </ion-select>
+
+
+
+    <ion-button type="submit" [disabled]="form.invalid" class="btn-holder" color="ligth"  size="large" expand="block">SIGUIENTE</ion-button>
+   
+  </form>
+
+  </ion-toolbar>
+
+</ion-content>
+

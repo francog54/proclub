@@ -1,0 +1,49 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+    <ion-back-button defaultHref="/" text="" color>
+      </ion-back-button> 
+  
+    </ion-buttons>
+    <ion-title class="title">
+      Crear Cuenta
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="stepper">
+    <img class="img" src="/assets/img/crear-cuenta/crearCuentaDatos.png">
+  </div>
+
+  <div class="textoAcceso">
+    Completá con tus datos personales
+  </div>
+  <form [formGroup]="form" (ngSubmit)="siguiente()">
+    <ion-card>
+      <ion-card-content>
+        <ion-item>
+          <ion-label position="stacked">Nombre</ion-label>
+          <ion-input formControlName="nombre" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" required>Apellido</ion-label>
+          <ion-input formControlName="apellido"></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label position="stacked" required>Documento de Identidad</ion-label>
+          <ion-input formControlName="documento"></ion-input>
+        </ion-item>
+      </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" class="ion-margin btnSiguiente" [disabled]="form.invalid" color="ligth" size="large" expand="block">SIGUIENTE</ion-button>
+        
+  </form>
+ 
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <img routerLink="/login" src="/assets/img/splash/logoProClubFondoV.png">
+  </ion-toolbar>
+</ion-footer>

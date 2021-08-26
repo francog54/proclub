@@ -1,0 +1,66 @@
+.sup {
+  background-color: #d90000;
+  height: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.searchbar {
+  --background: #922B21;
+  --color: white;
+}
+
+.row-container {
+  width: 100%;
+}
+
+.parrafo {
+  margin-left: 5px;
+  padding: 2px;
+}
+
+.titulo-beneficios {
+  margin: 15px;
+
+  h3 {
+    font-weight: 700;
+  }
+}
+
+.title {
+  margin-left: 10px;
+}
+
+.subtitle {
+  margin-left: 10px;
+}
+
+.card-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+
+.card {
+  border-radius: 10px;
+  width: 90%;
+}
+
+
+.img {
+  width: 100%;
+  height: 100px;
+}
+
+.card-beneficio {
+  width: 95% !important;
+  height: 100% !important;
+}
+
+.seleccionado {
+  background-color: gainsboro !important
+}

@@ -1,0 +1,27 @@
+.toolbar {
+    --background: #d90000;
+    padding-top: 10px;
+    ion-title {
+        --color: #ffffff;
+    }
+    ion-menu-button {
+        --color: #ffffff;
+    }
+    ion-title {
+        font-size: 18px;
+        font-style: normal !important;
+        font-weight: 530 !important;
+        text-align: start;
+    }
+}
+
+ion-icon {
+    color: white;
+    font-size: 25px
+}
+
+ion-fab-button {
+    --background: #d90000;
+    --background-activated: #da3333;
+    --box-shadow:none;
+}

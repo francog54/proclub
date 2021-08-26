@@ -1,0 +1,53 @@
+<ion-header>
+  <app-header [titulo]="titulo"></app-header>
+</ion-header>
+
+<ion-content>
+
+  <ion-item class="item-descripcion">
+    <ion-label>
+      <h1>Protocolo COVID-19</h1>
+      <h4>¡Nos cuidamos entre todos!</h4>
+      <p>Enviado por: Córdoba Athletic Club</p>
+      <p>28 de noviembre 2021 - 15:30hs</p>
+    </ion-label>
+  </ion-item>
+
+
+  <ion-infinite-scroll threshold="100px" id="infinite-scroll">
+    <ion-infinite-scroll-content loading-spinner="bubbles" loading-text="Loading more data...">
+
+      <ion-item lines="none">
+        <ion-text style="font-size: 15px;">Visto por: 100 usuarios</ion-text>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img
+            src="https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg"
+            alt="img">
+        </ion-avatar>
+        <ion-label>Item Avatar</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img
+            src="https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg"
+            alt="img">
+        </ion-avatar>
+        <ion-label>Item Avatar</ion-label>
+      </ion-item>
+
+      <ion-item>
+        <ion-avatar slot="start">
+          <img
+            src="https://img.favpng.com/25/13/19/samsung-galaxy-a8-a8-user-login-telephone-avatar-png-favpng-dqKEPfX7hPbc6SMVUCteANKwj.jpg"
+            alt="img">
+        </ion-avatar>
+        <ion-label>Item Avatar</ion-label>
+      </ion-item>
+
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
+</ion-content>

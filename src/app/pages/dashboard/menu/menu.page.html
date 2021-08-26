@@ -1,0 +1,57 @@
+<ion-menu side="start" menuId="first" contentId="main">
+  <ion-header class="ion-no-border">
+    <ion-toolbar class="red">
+      <div class="contenedor">
+        <div class="img">
+          <img src="./assets/img/logoUser.png" alt="" width="40" height="40">
+        </div>
+        <div class="contenedor2">
+          <p class="texto principal">¡Hola {{ userInfo.nombre }}! </p>
+          <p class="texto secundario">{{ userInfo.rol }} · {{ userInfo.club}}</p>
+        </div>
+      </div>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+    <ion-list>
+      <ion-menu-toggle *ngFor="let c of menu" autoHide="false">
+        <ion-item [routerLink]="c.redirectTo" detail="false">
+          <ion-icon [name]="c.icon" slot="start"></ion-icon>
+          {{ c.name }}
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle *ngIf="cantidadClubes > 1">
+        <ion-item>
+          <ion-icon name="repeat-outline" slot="start"></ion-icon>
+          <ion-label> Cambiar club</ion-label>
+          <ionic-selectable [(ngModel)]="clubCambiar" [canAddItem]="true" addButtonText="Agregar un nuevo club"
+            (onAddItem)="agregarClub($event)" [items]="listClubesCambiar" itemValueField="id" itemTextField="nombre"
+            [canSearch]="true" (onChange)="clubChangeCambiar($event)">
+          </ionic-selectable>
+
+        </ion-item>
+      </ion-menu-toggle>
+      <ion-menu-toggle *ngIf="cantidadClubes == 1">
+        <ion-item>
+          <ion-icon name="add" slot="start"></ion-icon>
+          <ion-label> Agregar club</ion-label>
+          <ionic-selectable #selectAgregar [(ngModel)]="clubAgregar" [items]="listClubesAgregar" itemValueField="id"
+            itemTextField="nombre" [canSearch]="true" (onChange)="clubChangeAgregar($event)">
+          </ionic-selectable>
+
+        </ion-item>
+      </ion-menu-toggle>
+    </ion-list>
+  </ion-content>
+  <ion-footer class="ion-margin-bottom ion-no-border">
+    <ion-menu-toggle autoHide="false">
+      <ion-item (click)="cerrarSesion()" detail="false">
+        <ion-icon name="log-out-outline" slot="start"></ion-icon>
+        <ion-label>
+          Cerrar Sesion
+        </ion-label>
+      </ion-item>
+    </ion-menu-toggle>
+  </ion-footer>
+</ion-menu>
+<ion-router-outlet id="main"></ion-router-outlet>

@@ -1,0 +1,62 @@
+.sup {
+  background-color: #d90000;
+  border-radius: 0px 0px 24px 24px;
+  height: 56px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
+}
+
+.img {
+  margin-top: 10px;
+}
+
+
+.contenedor {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.nombre {
+  font-style: normal;
+  font-weight: 550;
+  font-size: 22px;
+  line-height: 26px;
+  color: #000000;
+}
+
+.club {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  color: #92949c;
+  margin-top: -10px;
+}
+
+.rol {
+  border: 2px solid #d90000;
+  box-sizing: border-box;
+  border-radius: 4px;
+  margin-top: -10px;
+
+  p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 15px;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    color: #d90000;
+    margin: 0px 10px;
+  }
+}
+
+ion-list {
+  margin-top: 20px;
+}

@@ -1,0 +1,73 @@
+<ion-header class="ion-no-border">
+  <app-header [titulo]="titulo"></app-header>
+</ion-header>
+
+<ion-content>
+  <ion-row>
+    <ion-col size="6">
+      <ion-card class="rojo texto-blanco card-alto">
+        <ion-card-header (click)="presentActionSheetQR()">
+          <ion-row>
+            <ion-col size="8">
+              <ion-card-title class="title-card" style="color: white !important;">Ver QR de espacios</ion-card-title>
+            </ion-col>
+            <ion-col size="4">
+              <ion-icon class="icon-card icon-qr" name="qr-code-outline" style="color: white !important;"></ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+    <ion-col size="6">
+      <ion-card class="gris card-alto" (click)="presentActionSheetQR()">
+        <ion-card-header>
+          <ion-row>
+            <ion-col size="8">
+              <ion-card-title class="title-card asistencia-titulo" style="white-space: nowrap;">Asistencias
+              </ion-card-title>
+            </ion-col>
+            <ion-col size="4">
+              <ion-icon class="icon-card icon-qr" name="checkmark-done-outline" style="color: white !important;">
+              </ion-icon>
+            </ion-col>
+          </ion-row>
+        </ion-card-header>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-row>
+    <ion-col size="12" class="ion-padding-start">
+      <h2 class="ultimos-ingresos">Últimos Ingresos</h2>
+    </ion-col>
+    <ion-col size="12" *ngFor="let item of this.ingresos">
+      <ion-row (click)="goToScanCodigoEspacio(item)">
+        <ion-col size="2">
+          <div class="logo-deporte">
+            <img *ngIf="item.reserva.turno.espacio.image" [src]="item.reserva.turno.espacio.image">
+            <ion-icon *ngIf="!item.reserva.turno.espacio.image" name="football-outline" class="football-icon">
+            </ion-icon>
+          </div>
+        </ion-col>
+        <ion-col size="10">
+          <div class="deportes">
+            <div class="text-container">
+              <h3 class="ion-no-margin">
+                <b>{{item.reserva.turno.espacio.nombre}}</b>
+              </h3>
+              <h6 class="ion-no-margin descripcion-tarjeta">{{item.reserva.turno.espacio.descripcion}}</h6>
+              <h6 class="ion-no-margin descripcion-tarjeta">
+                {{item.fecha + ' - ' + item.reserva.turno.horaDesde + '-' +item.reserva.turno.horaHasta}} Hs.</h6>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <ion-fab (click)="goToScan()" vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="qr-code-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

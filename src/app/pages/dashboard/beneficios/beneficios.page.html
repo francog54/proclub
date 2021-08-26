@@ -1,0 +1,45 @@
+<ion-header class="ion-no-border">
+  <app-header [titulo]="titulo"></app-header>
+  <div class="sup">
+    <ion-searchbar [(ngModel)]="searchbar" class="searchbar" placeholder="Buscar" (ionChange)="filterList($event)">
+    </ion-searchbar>
+  </div>
+</ion-header>
+
+<ion-content>
+
+  <ion-row class="ion-padding">
+    <ion-col>
+      <ion-chip [ngClass]="{'seleccionado': this.rubroSeleccionado?.id === 0}" outline color="dark" (click)="selectedTodos({
+        id: 0,
+        nombre: 'Todos los beneficios'
+      })">
+        <ion-icon name="apps"></ion-icon>
+        <ion-label>Todos los beneficios</ion-label>
+      </ion-chip>
+    </ion-col>
+    <ion-col *ngFor="let item of this.rubros">
+      <ion-chip [ngClass]="{'seleccionado': this.rubroSeleccionado?.id === item.id}" outline color="dark"
+        (click)="selectedRubro(item)">
+        <ion-icon name="apps"></ion-icon>
+        <ion-label>{{item.nombre}}</ion-label>
+      </ion-chip>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-row class="ion-no-padding">
+        <ion-col *ngFor="let item of beneficios" class="ion-no-padding" size="6" (click)="goToDetalle(item)">
+          <ion-card class="card card-beneficio">
+            <ion-card-content class="ion-no-padding">
+              <img
+                src="assets/img/no-image-available.png"
+                class="img">
+              <ion-card-title class="title mt-3">{{item.nombre}}</ion-card-title>
+              <ion-card-subtitle class="subtitle mt-3 mb-3">{{item.descripcion}}</ion-card-subtitle>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+</ion-content>

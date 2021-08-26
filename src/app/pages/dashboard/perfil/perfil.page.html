@@ -1,0 +1,24 @@
+<ion-header class="ion-no-border">
+  <app-header [titulo]="titulo"></app-header>
+</ion-header>
+
+<ion-content>
+  <div class="sup">
+    <img class="img" src="./assets/img/logoUser.png" width="90">
+  </div>
+  <div class="contenedor">
+    <p class="nombre">{{ userInfo.nombre }}</p>
+    <p class="club">{{ userInfo.club }}</p>
+    <div class="rol">
+      <p>{{ userInfo.rol }}</p>
+    </div>
+  </div>
+  <ion-list>
+
+    <ion-item *ngFor="let item of acciones" [routerLink]="item.redirect" button detail>
+      <ion-label>
+        {{ item.nombre }}
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>

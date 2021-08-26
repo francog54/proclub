@@ -1,0 +1,22 @@
+<ion-header class="ion-no-border">
+    <app-header [titulo]="titulo"></app-header>
+</ion-header>
+
+<ion-content>
+
+    <ion-row class="ion-padding">
+        <ion-col size="12">
+            <h2 class="titulo-escanea">Escaneá el codigo para marcar tu asistencia</h2>
+        </ion-col>
+
+        <ion-row class="ion-padding">
+            <ion-col size="12" class="ion-padding fondo-blanco">
+                <img class="fondo-blanco" src="https://boofcv.org/images/thumb/3/35/Example_rendered_qrcode.png/400px-Example_rendered_qrcode.png" />
+            </ion-col>
+        </ion-row>
+
+        <ion-col size="12" class="ion-padding" (click)="mostrarAsistencias()">
+            <ion-button expand="block" color="rojo">MOSTRAR ASISTENCIAS</ion-button>
+        </ion-col>
+    </ion-row>
+</ion-content>

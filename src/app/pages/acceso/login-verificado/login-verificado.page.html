@@ -1,0 +1,61 @@
+<ion-content>
+
+  <div id="container">
+    <div style="margin-top:-60px ;">
+      <img src="/assets/img/splash/logoUser.png">
+    </div>
+    <div class="holaNombre">
+      ¡Hola {{ nombre }}!
+    </div>
+    <div class="textoAcceso">
+      Tu correo esta verificado, ahora
+      <br>
+      accedé con tu correo contraseña
+    </div>
+    <form [formGroup]="form" (ngSubmit)="validar()">
+      <div class="input-group input-group-lg inputCorreo mt-4">
+        <span class="input-group-text" style="background-color: #e9ecef;" id="inputGroup-sizing-lg">
+          <ion-icon name="mail-outline" class="mail-icon"></ion-icon>
+          <!-- <svg
+            xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="" viewBox="0 0 16 16">
+            <path
+              d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z" />
+          </svg> -->
+        </span>
+        <input type="text" class="form-control" formControlName="correo" placeholder="Correo electronico"
+          style="border-style: none;">
+        <span class=" input-group-text" style="background-color: #e9ecef; margin-right: 20px;"
+          id="inputGroup-sizing-lg"><svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
+            class="bi bi-check" viewBox="0 0 16 16">
+            <path style="color:#42D267"
+              d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z" />
+          </svg></span>
+      </div>
+      <div class="input-group input-group-lg inputCorreo mt-2">
+        <span class="input-group-text" id="inputGroup-sizing-lg"><svg xmlns="http://www.w3.org/2000/svg" width="20"
+            height="20" fill="currentColor" class="bi bi-key" viewBox="0 0 16 16">
+            <path
+              d="M0 8a4 4 0 0 1 7.465-2H14a.5.5 0 0 1 .354.146l1.5 1.5a.5.5 0 0 1 0 .708l-1.5 1.5a.5.5 0 0 1-.708 0L13 9.207l-.646.647a.5.5 0 0 1-.708 0L11 9.207l-.646.647a.5.5 0 0 1-.708 0L9 9.207l-.646.647A.5.5 0 0 1 8 10h-.535A4 4 0 0 1 0 8zm4-3a3 3 0 1 0 2.712 4.285A.5.5 0 0 1 7.163 9h.63l.853-.854a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.646-.647a.5.5 0 0 1 .708 0l.646.647.793-.793-1-1h-6.63a.5.5 0 0 1-.451-.285A3 3 0 0 0 4 5z" />
+            <path d="M4 8a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
+          </svg></span>
+        <input type="password" class="form-control" formControlName="password" placeholder="Contraseña"
+          autocomplete="off" style="margin-right: 20px;  border-style: none; height: 5rem;">
+
+        <ion-fab horizontal="end" class="icon-eye">
+          <ion-icon name="eye-outline" class="icon" color="medium"></ion-icon>
+        </ion-fab>
+
+      </div>
+      <ion-button type="submit" size="large" [disabled]="form.invalid" class="btnIngresar mt-2" color="proclub"
+        expand="block">INGRESAR</ion-button>
+    </form>
+    <div class="recuperarClave" (click)="recuperarClave()">
+      No sé mi clave
+    </div>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <img routerLink="/login" src="/assets/img/splash/ProClubLogo.png">
+  </ion-toolbar>
+</ion-footer>

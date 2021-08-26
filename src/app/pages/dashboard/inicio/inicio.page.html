@@ -1,0 +1,178 @@
+<ion-header class="ion-no-border">
+  <app-toolbar-inicio></app-toolbar-inicio>
+</ion-header>
+
+<ion-content class="background-inicio">
+  <!-- TOGGLE CLUB -->
+  <app-toggle-inicio></app-toggle-inicio>
+
+  <!-- NOTIFICACIONES -->
+  <ion-card class="card">
+    <ion-card-header class="ion-no-padding">
+      <ion-item>
+        <ion-icon name="ellipsis-vertical-outline" slot="end" color="dark" size="small"></ion-icon>
+        <ion-label>
+          <b>Notificaciones ({{this.listNotificaciones ? this.listNotificaciones.length : 0}})</b>
+        </ion-label>
+      </ion-item>
+    </ion-card-header>
+    <ion-card-content>
+      <ion-slides [options]="slideOptsNotificaciones">
+        <ion-slide *ngFor="let item of this.listNotificaciones">
+          <ion-row class="ion-text-start">
+            <ion-col size="12" class="ion-no-padding ion-margin-top">
+              <h1>{{item.club.notificacion.titulo}}</h1>
+            </ion-col>
+            <ion-col size="12" class="ion-no-padding">
+              <h6>{{item.club.notificacion.descripcion}}</h6>
+            </ion-col>
+          </ion-row>
+        </ion-slide>
+      </ion-slides>
+    </ion-card-content>
+  </ion-card>
+
+
+
+  <!-- ELEGIR DEPORTE -->
+  <ion-row class="ion-padding">
+    <h3>Elegí un deporte para reservar</h3>
+    <ion-col size="12">
+      <ion-row>
+        <ion-col size="3">
+          <ion-card class="card ion-no-margin">
+            <ion-row>
+              <ion-col size="12" class="ion-text-center">
+                <ion-icon class="icon-categorias" name="football-outline"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+          <div></div>
+          <ion-row>
+            <ion-col size="12" class="ion-text-center">
+              <ion-label>Futbol</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="3">
+          <ion-card class="card ion-no-margin">
+            <ion-row>
+              <ion-col size="12" class="ion-text-center">
+                <ion-icon class="icon-categorias" name="basketball-outline"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+          <div></div>
+          <ion-row>
+            <ion-col size="12" class="ion-text-center">
+              <ion-label>Basquet</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="3">
+          <ion-card class="card ion-no-margin">
+            <ion-row>
+              <ion-col size="12" class="ion-text-center">
+                <ion-icon class="icon-categorias" name="american-football-outline"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+          <div></div>
+          <ion-row>
+            <ion-col size="12" class="ion-text-center">
+              <ion-label>Rugby</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+        <ion-col size="3">
+          <ion-card class="card ion-no-margin">
+            <ion-row>
+              <ion-col size="12" class="ion-text-center">
+                <ion-icon class="icon-categorias" name="apps-outline"></ion-icon>
+              </ion-col>
+            </ion-row>
+          </ion-card>
+          <div></div>
+          <ion-row>
+            <ion-col size="12" class="ion-text-center">
+              <ion-label>Ver más</ion-label>
+            </ion-col>
+          </ion-row>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <!-- PROXIMO TURNO -->
+  <ion-row class="ion-padding">
+    <ion-col size="10">
+      <h3 class="ion-no-margin">Próximo turno</h3>
+    </ion-col>
+    <ion-col size="2">
+      <span class="ver-mas">Ver más</span>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-row *ngFor="let item of [1,1,1,1]">
+        <ion-col size="2">
+          <div class="logo-deporte">
+            <img src="https://recreasport.com/wp-content/uploads/2017/04/IMAG0030.jpg" alt="football">
+          </div>
+        </ion-col>
+        <ion-col size="10">
+          <div class="deportes">
+            <div class="text-container">
+              <ion-row>
+                <ion-col size="7" class="ion-no-padding">
+                  <h6 class="ion-no-margin">
+                    <ion-icon name="calendar-outline"></ion-icon>
+                    <b class="margin-left">Mie. 20 Abril</b>
+                  </h6>
+                </ion-col>
+                <ion-col size="5" class="ion-no-padding">
+                  <h6 class="ion-no-margin">
+                    <ion-icon name="time-outline"></ion-icon>
+                    <span class="margin-left">20-21hs</span>
+                  </h6>
+                </ion-col>
+              </ion-row>
+              <h6 class="ion-no-margin descripcion-tarjeta">Cancha de fútbol 5</h6>
+            </div>
+          </div>
+        </ion-col>
+      </ion-row>
+    </ion-col>
+  </ion-row>
+
+  <!-- BENEFICIOS -->
+  <ion-row class="ion-padding">
+    <ion-col size="10">
+      <h3 class="ion-no-margin">Beneficios destacados</h3>
+    </ion-col>
+    <ion-col size="2">
+      <span class="ver-mas">Ver más</span>
+    </ion-col>
+
+    <ion-col size="12">
+      <ion-slides pager="true" [options]="slideOptsBeneficios">
+        <ion-slide *ngFor="let item of this.beneficios">
+          <ion-card class="card ion-text-left">
+            <img src="assets/img/no-image-available.png" />
+            <ion-card-header>
+              <ion-card-title>{{item.beneficio.nombre}}</ion-card-title>
+              <ion-card-subtitle>{{item.beneficio.descripcion}}</ion-card-subtitle>
+            </ion-card-header>
+          </ion-card>
+        </ion-slide>
+      </ion-slides>
+    </ion-col>
+  </ion-row>
+
+  <!-- BOTON SCAN -->
+
+  <ion-fab (click)="scan()" vertical="bottom" horizontal="center" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="qr-code-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>

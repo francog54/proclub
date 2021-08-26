@@ -1,0 +1,46 @@
+.toolbar-text {
+  width: 100%;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+
+  .notificacion-text {
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+  }
+
+  span {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .span-1 {
+    white-space: nowrap;
+    color: red;
+  }
+}
+
+form .btn-holder {
+  background: #d90000 !important;
+  color: white !important;
+  border-radius: 10px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 150px;
+  font-size: 14px !important;
+
+  &[disabled] {
+    opacity: 1;
+    --ion-color-base: grey;
+  }
+}
+
+form {
+  ion-select {
+    width: 100%;
+    font-size: 18px;
+  }
+}

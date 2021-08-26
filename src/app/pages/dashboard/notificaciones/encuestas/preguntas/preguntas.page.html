@@ -1,0 +1,46 @@
+<ion-header class="ion-no-border">
+  <app-header [titulo]="titulo"></app-header>
+</ion-header>
+
+<ion-content>
+  <ion-toolbar class="toolbar-text">
+    <ion-text class="notificacion-text">Preguntas</ion-text>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col class="ion-no-padding">
+          <span>Titulo y descripción ></span>
+          <span class="span-1">Preguntas ></span>
+          <span>Destinatarios ></span>
+          <span>Enviar</span>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+
+  </ion-toolbar>
+
+  <ion-toolbar class="toolbar-input">
+
+    <form [formGroup]="form" (ngSubmit)="siguiente()">
+
+      <ul *ngFor="let pregunta of preguntas">
+        {{ pregunta.titulo }}
+        <br>
+        <li *ngFor="let opcion of pregunta.respuesta">
+          {{ opcion.titulo }}
+        </li>
+        <span (click)="agregarOpcion(pregunta.id)" class="ion-margin btnSiguiente" color="ligth" size="large"
+          expand="block"> + Añadir opción</span>
+      </ul>
+
+      <ion-button (click)="agregarPregunta()" class="btn-holder1" size="large" expand="block" fill="outline">
+        AGREGAR PREGUNTA</ion-button>
+
+      <ion-button (click)="siguiente()" class="ion-margin btn-holder" color="ligth" size="large" expand="block">
+        CONTINUAR</ion-button>
+
+    </form>
+
+  </ion-toolbar>
+
+</ion-content>

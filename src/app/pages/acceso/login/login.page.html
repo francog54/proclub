@@ -1,0 +1,43 @@
+<ion-content>
+  <div id="container">
+
+    <div class="img">
+      <img src="../../../../assets/img/splash/ilustracion_celular.png" alt="">
+    </div>
+    <div class="hola">
+      ¡Hola!
+    </div>
+    <div class="textoAcceso">
+      Para ingresar accedé
+      <br>
+      con tu correo electronico
+    </div>
+    <form [formGroup]="form" (ngSubmit)="validar()">
+      <div class="input-group input-group-lg inputCorreo mt-4">
+        <span class="input-group-text" id="inputGroup-sizing-lg">
+          <ion-icon name="mail-outline" class="mail-icon"></ion-icon>
+          <!-- <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-briefcase"
+            viewBox="0 0 16 16">
+            <path
+              d="M6.5 1A1.5 1.5 0 0 0 5 2.5V3H1.5A1.5 1.5 0 0 0 0 4.5v8A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-8A1.5 1.5 0 0 0 14.5 3H11v-.5A1.5 1.5 0 0 0 9.5 1h-3zm0 1h3a.5.5 0 0 1 .5.5V3H6v-.5a.5.5 0 0 1 .5-.5zm1.886 6.914L15 7.151V12.5a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5V7.15l6.614 1.764a1.5 1.5 0 0 0 .772 0zM1.5 4h13a.5.5 0 0 1 .5.5v1.616L8.129 7.948a.5.5 0 0 1-.258 0L1 6.116V4.5a.5.5 0 0 1 .5-.5z" />
+          </svg> -->
+        </span>
+        <input type="text" class="form-control" formControlName="correo" placeholder="Correo electronico"
+          style="margin-right: 20px; border-top-right-radius: 5px; height: 4rem;">
+
+        <div class="spinner-container">
+          <ion-spinner name="bubbles" *ngIf="spinner" class="spinner ion-no-padding"></ion-spinner>
+          <ion-icon name="checkmark-outline" *ngIf="checked" class="checked ion-no-padding"></ion-icon>
+        </div>
+      </div>
+
+      <ion-button type="submit" size="large" class="btnIngresar" color="proclub" [disabled]="form.invalid"
+        expand="block">INGRESAR</ion-button>
+    </form>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <img src="/assets/img/splash/ProClubLogo.png">
+  </ion-toolbar>
+</ion-footer>

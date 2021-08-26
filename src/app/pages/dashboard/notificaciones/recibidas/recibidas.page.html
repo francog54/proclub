@@ -1,0 +1,9 @@
+<ion-content>
+  <ion-item *ngFor="let notificacion of notificacionesRecibidas" (click)="verNotificacion(notificacion.id)">
+    <ion-label>
+      <h1 style="font-weight: 700;">{{notificacion.titulo}}</h1>
+      <p>{{notificacion.descripcion}}</p>
+      <p>{{notificacion.fecha}}</p>
+    </ion-label>
+  </ion-item>
+</ion-content>

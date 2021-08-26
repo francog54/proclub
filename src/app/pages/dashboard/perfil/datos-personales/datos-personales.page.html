@@ -1,0 +1,60 @@
+<ion-header class="ion-no-border">
+  <app-header [titulo]="titulo"></app-header>
+</ion-header>
+
+<ion-content>
+  <div class="container">
+    <form [formGroup]="form">
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked" class="form-label">Correo electrónico<b style="color:red;">*</b></ion-label>
+        <ion-input (ionBlur)="guardaDatos()" formControlName="correo"></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked" class="form-label">Documento de identidad<b style="color:red;">*</b></ion-label>
+        <ion-input (ionBlur)="guardaDatos()" formControlName="documento"></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked" class="form-label">Fecha de nacimiento<b style="color:red;">*</b></ion-label>
+        <ion-input (ionBlur)="guardaDatos()" formControlName="fechaNacimiento"></ion-input>
+      </ion-item>
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked" class="form-label">Domicilio<b style="color:red;">*</b></ion-label>
+        <ion-input (ionBlur)="guardaDatos()" formControlName="calle"></ion-input>
+      </ion-item>
+
+      <ion-row>
+        <ion-col>
+          <ion-item class="ion-no-padding">
+            <ion-label position="stacked" class="form-label">Numero<b style="color:red;">*</b></ion-label>
+            <ion-input (ionBlur)="guardaDatos()"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="ion-no-padding">
+            <ion-label position="stacked" class="form-label">Piso<b style="color:red;">*</b></ion-label>
+            <ion-input (ionBlur)="guardaDatos()"></ion-input>
+          </ion-item>
+        </ion-col>
+        <ion-col>
+          <ion-item class="ion-no-padding">
+            <ion-label position="stacked" class="form-label">Dpto<b style="color:red;">*</b></ion-label>
+            <ion-input (ionBlur)="guardaDatos()"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-item class="ion-no-padding">
+        <ion-label position="stacked" class="form-label">Codigo postal<b style="color:red;">*</b></ion-label>
+        <ion-input (ionBlur)="guardaDatos()"></ion-input>
+      </ion-item>
+
+      <ion-fab vertical="bottom" horizontal="end" slot="fixed" class="mt-4 mb-4">
+        <ion-fab-button color="white">
+          <ion-icon name="pencil-sharp"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+
+
+    </form>
+  </div>
+</ion-content>

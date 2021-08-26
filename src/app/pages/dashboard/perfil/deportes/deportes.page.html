@@ -1,0 +1,59 @@
+<ion-header class="ion-no-border">
+  <app-header [titulo]="titulo"></app-header>
+</ion-header>
+
+<ion-content>
+
+  <div class="grid-container">
+    <div class="logo-deporte">
+      <ion-icon name="football-outline" class="football-icon"></ion-icon>
+    </div>
+    <div class="deportes">
+      <ion-fab horizontal="end" class="icon-deporte">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-fab>
+      <div class="text-container">
+        <ion-text class="football"><b>Football</b></ion-text>
+        <br>
+        <ion-text style="opacity: 50%;">Primera división C</ion-text>
+        <br>
+        <ion-text style="opacity: 50%;">Arquero</ion-text>
+        <br>
+        <ion-button class="btn-deportes-red" color="transparent">
+          <ion-icon name="checkmark-outline"></ion-icon>
+          <b>confirmado</b>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+  
+  <div class="grid-container">
+    <div class="logo-deporte-gray">
+      <ion-icon name="football-outline" class="football-icon"></ion-icon>
+    </div>
+    <div class="deportes">
+      <ion-fab horizontal="end" class="icon-deporte">
+        <ion-icon name="ellipsis-vertical-outline"></ion-icon>
+      </ion-fab>
+      <div class="text-container">
+        <ion-text class="football"><b>Football</b></ion-text>
+        <br>
+        <ion-text style="opacity: 50%;">Primera división C</ion-text>
+        <br>
+        <ion-text style="opacity: 50%;">Arquero</ion-text>
+        <br>
+        <ion-button class="btn-deportes-gray" color="transparent">
+          <ion-icon name="time-outline"></ion-icon>
+          <b>Esperando confirmación</b>
+        </ion-button>
+      </div>
+    </div>
+  </div>
+</ion-content>
+
+<ion-toolbar class="ion-padding-start ion-padding-end">
+  <ion-button expand="block" class="btn-deportes-red" color="transparent">
+    <ion-icon name="plus-outline"></ion-icon>
+    <b>+ Agregar nuevo deporte</b>
+  </ion-button>
+</ion-toolbar>

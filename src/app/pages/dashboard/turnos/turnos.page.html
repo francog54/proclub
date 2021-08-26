@@ -1,0 +1,32 @@
+<ion-header class="ion-no-border">
+  <div class="header-container">
+    <app-header [titulo]="titulo"></app-header>
+
+    <ion-buttons class="ion-no-margin">
+      <ion-button (click)="mostrarPop( $event )">
+        <ion-icon name="add-outline" color="light" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </div>
+</ion-header>
+
+
+
+<ion-content>
+
+  <ion-tabs>
+    <ion-tab-bar class="tabs-turnos" slot="top">
+      <ion-tab-button  class="tabs-turnos" tab="activos">
+        <button  class="tabs-turnos">ACTIVOS</button>
+      </ion-tab-button>
+   
+      <ion-tab-button  class="tabs-turnos"  tab="inactivos">
+        <button  class="tabs-turnos">INACTIVOS</button>
+      </ion-tab-button>
+    </ion-tab-bar>
+
+  
+  </ion-tabs>
+
+</ion-content>

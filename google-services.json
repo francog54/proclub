@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "553960707025",
+    "project_id": "proclub-f20ff",
+    "storage_bucket": "proclub-f20ff.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:553960707025:android:52dfeeb5b0be3f22b746f0",
+        "android_client_info": {
+          "package_name": "io.texdinamo.proclubapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "553960707025-slqhhcbggoeq1fvu2gf2hr7tu90anrmc.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAxgtmLSSIxyieKnJ97jLz7W0q2mItZ7xQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "553960707025-slqhhcbggoeq1fvu2gf2hr7tu90anrmc.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

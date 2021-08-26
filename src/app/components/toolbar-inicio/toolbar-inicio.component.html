@@ -1,0 +1,11 @@
+<ion-toolbar class="toolbar ion-no-border">
+  <ion-buttons slot="start">
+    <ion-menu-button class="blank"></ion-menu-button>
+  </ion-buttons>
+  <ion-title>¡Hola, {{ userInfo.nombre }}!</ion-title>
+  <ion-buttons slot="start" slot="end" >
+    <ion-fab-button size="small" [routerLink]="'/menu/notificaciones'">
+      <ion-icon class="notificacion"  name="notifications"></ion-icon>
+    </ion-fab-button>
+  </ion-buttons>
+</ion-toolbar>

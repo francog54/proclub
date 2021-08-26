@@ -1,0 +1,77 @@
+<ion-header class="ion-no-border">
+  <app-header [titulo]="titulo"></app-header>
+ 
+  <ion-col size="12">
+    <ion-row>
+      <ion-col size="2">
+        <div class="logo-deporte">
+          <img src="https://recreasport.com/wp-content/uploads/2017/04/IMAG0030.jpg" alt="football">
+        </div>
+      </ion-col>
+      <ion-col size="10">
+        <div class="deportes">
+          <div class="text-container">
+            <ion-row>
+              <ion-col size="7" class="ion-no-padding">
+                <h6 class="ion-no-margin">
+                  <ion-icon name="calendar-outline"></ion-icon>
+                  <b>Mie. 20 Abril</b>
+                </h6>
+              </ion-col>
+              <ion-col size="5" class="ion-no-padding">
+                <h6 class="ion-no-margin">
+                  <ion-icon name="time-outline"></ion-icon>
+                  <span>20-21hs</span>
+                </h6>
+              </ion-col>
+            </ion-row>
+            <h6 class="ion-no-margin descripcion-tarjeta">Cancha de fútbol 5</h6>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-col>
+</ion-header>
+
+<ion-content >
+
+
+  <ion-item>
+    <ion-label>Elegí una fecha para reservar</ion-label>
+    <ion-datetime   dayShortNames="Lun, Mar, Mie, Jue, Vie, Sab, Dom" [pickerOptions]="customMesDia"    displayFormat="MMM DD" monthShortNames="Enero, Febrero, Marzo, Abril, Mayo, Junio, Julio, Agosto, Septiembre, Octubre, Noviembre, Diciembre"></ion-datetime>
+  </ion-item>
+
+
+  <ion-item>
+    <ion-label>Turnos disponibles </ion-label>
+    <ion-datetime [pickerOptions]="customHorario" displayFormat="h:mm A" minuteValues="0"></ion-datetime>
+  </ion-item>
+ 
+  <ion-row class="ion-padding">
+      <ion-col (click)="seleccionaTurno(turno.id)" size="4" class="turnos" *ngFor="let turno of turnos">
+        {{ turno.horaDesde }} - {{  turno.horaHasta }}
+      </ion-col>
+      <ion-col size="4"  class="turnos" >
+        18:00 a 19:00
+      </ion-col>
+      <ion-col size="4"  class="turnos" >
+        18:00 a 19:00
+      </ion-col>
+  </ion-row>
+
+</ion-content>
+<ion-footer>
+
+    <ion-row>
+          <ion-col size="7" >
+            <ion-icon style="padding-top: 10pt; padding-left: 10pt;" name="calendar-outline"></ion-icon>  
+             {{ dia }} {{ mes }} 
+          </ion-col>
+          <ion-col size="5">
+             <button (click)="turnoConfirmado(1)" class="btn-holder"> Cotinuar 	<ion-icon name="arrow-forward"  end></ion-icon> </button>
+          </ion-col>
+      </ion-row>
+
+
+</ion-footer>
+

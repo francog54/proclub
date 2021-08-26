@@ -1,0 +1,62 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/" text="" color>
+      </ion-back-button>
+    </ion-buttons>
+    <ion-title class="title">
+      Club y Deporte
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+<ion-content>
+  <div class="stepper">
+    <img class="img" src="/assets/img/crear-cuenta/crearCuentaClub.png">
+  </div>
+  <div class="textoAcceso">
+    ¿Con qué club te vas a registrar?
+  </div>
+  
+
+  <form [formGroup]="form" (ngSubmit)="siguiente()">
+    <ion-card>
+      <ion-card-content>
+    <!--    <ion-item>
+          <ion-label>Club</ion-label>
+          <ion-select  name="club" (ionChange)="clubSeleccionado()" formControlName="club">
+            <ion-select-option *ngFor="let item of listClubes "  [value]="item.id">{{ item.nombre }}</ion-select-option>
+          </ion-select>
+        </ion-item> -->
+
+        <ion-item>
+          <ion-label>Buscá tu club</ion-label>
+          <ionic-selectable
+          formControlName="club"
+           
+            [items]="listClubes"
+            itemValueField="id"
+            itemTextField="nombre"
+            [canSearch]="true"
+            (onChange)="clubChange($event)">
+          </ionic-selectable>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Disciplina</ion-label>
+          <ion-select  name="disciplina"  formControlName="disciplina">
+            <ion-select-option *ngFor="let item of listDisciplina" [value]="item.disciplinaId">{{ item.disciplina.nombre }}</ion-select-option>
+          </ion-select>
+        </ion-item>        
+      </ion-card-content>
+    </ion-card>
+    <ion-button type="submit" [disabled]="form.invalid" class="ion-margin btnSiguiente" color="ligth"  size="large" expand="block">SIGUIENTE</ion-button>
+        
+  </form>
+
+</ion-content>
+
+<ion-footer class="ion-no-border">
+  <ion-toolbar class="ion-text-center">
+    <img routerLink="/login" src="/assets/img/splash/logoProClubFondoV.png">
+  </ion-toolbar>
+</ion-footer>

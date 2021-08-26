@@ -1,0 +1,101 @@
+ion-content {
+  --height: 100%;
+  --background: linear-gradient(0deg, #f4f3f3 50%, #6b64f8 50%);
+}
+
+ion-toolbar {
+  --background: #f4f3f3;
+}
+
+img {
+  width: 150px;
+}
+
+#container {
+  text-align: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.holaNombre {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 31px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.textoAcceso {
+  margin-top: 20px;
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  color: #ffffff;
+}
+
+.inputCorreo {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.mail-icon {
+  font-size: 25px;
+}
+
+.icon {
+  font-size: 25px;
+}
+
+.icon-eye {
+  margin-right: 30px;
+  margin-top: 20px;
+}
+
+.btnIngresar {
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 15px;
+  font-family: 'Roboto',
+    sans-serif;
+
+  &[disabled] {
+    opacity: 1;
+    --ion-color-base: grey;
+  }
+}
+
+.input-group-text {
+  border-style: none;
+  background-color: white;
+}
+
+.form-control {
+  padding-top: 15px;
+  padding-left: 0;
+}
+
+.form-control:focus {
+  border-color: rgba(255, 255, 255, 0.9);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.3), 0 0 8px rgba(255, 255, 255, 0.3);
+}
+
+.recuperarClave {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  padding-top: 30px;
+  text-decoration-line: underline;
+
+  color: #000000;
+}
